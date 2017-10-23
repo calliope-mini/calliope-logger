@@ -55,7 +55,6 @@ int main(void) {
     uBit.serial.setTxBufferSize(255);
     uBit.serial.baud(115200);
     uBit.serial.send("Calliope Data Logger v1.0\r\n");
-    MicroBitSerialMode ::
     uBit.radio.enable();
     uBit.radio.setGroup(0b01100110);
     uBit.messageBus.listen(MICROBIT_ID_RADIO, MICROBIT_RADIO_EVT_DATAGRAM, onData);
